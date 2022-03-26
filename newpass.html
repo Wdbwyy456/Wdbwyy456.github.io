@@ -19,6 +19,9 @@
       width: 24rem;
       margin: 0 auto;
     }
+    .content{
+      margin-left: 25px;
+    }
     .container {
       width: 350px;
       height: 6.9943rem;
@@ -185,65 +188,66 @@
 </head>
 
 <body>
-  <div class="w">
-    <div class="container">
-      <!-- logo行 -->
-      <nav class="nav">
-      </nav>
-      <!-- 通行码行 -->
-      <section class="tongxingma">
-        <h3 class="changecolor"> 
-          <!-- <span style="color:#ccc">【</span>切换账号<span style="color:#ccc">】</span> -->
-          <span style="color:#00c;font-size: .8229rem;font-family: 宋体;font-weight: normal;margin-right: 1.7143rem;">〖切换账号〗</span>
-        </h3>
-        <input type="file" name="" id="chooseImage" accept="*"
-          style="display: none;outline: none;border-width: 0;">
-        <span class="suijima">623</span>        
-        <input type="text" class="changesjs" style="display: none;outline: none;border-width: 0;">
-      </section>
-    </div>
-    <!-- 时间行 -->
-    <section class="time">
-      <div class="beforeline"></div>
-      <span style="font-size: 12px;margin-left: 5px;">获取时间：</span>
-      <span class="getdate" style="color: #a0a;font-size: 16px;font-weight: normal;font-family: 宋体,黑体;margin-left: -10px;"><button>获取时间</button></span>
-      <span style="font-size: 12px;margin-left: -5px;">&nbsp;有效时间剩余：</span>
-      <span class="getminute" style="margin-left: -10px;color: #c00; font-weight: 700;font-size: 22px;font-family: 宋体,黑体;"><button>获取有效剩余时间</button></span>
-      <div class="aftertline"></div>
-    </section>
-    <!-- 个人信息 -->
-    <div style="margin-left: 10px;">
-      <section class="info">
-        <div class="text">
-          <h3 class="name">计算机学院.名字</h3>
-          <input type="text" class="changename" style="display: none;outline: none;border-width: 0;">
-          <h3>主校区大门东门.<span class="inout" style="background-color: #007500;color: #ffea3f;">入口</span>
+ <div class="w">
+    <div class="content">
+      <div class="container">
+        <!-- logo行 -->
+        <nav class="nav">
+        </nav>
+        <!-- 通行码行 -->
+        <section class="tongxingma">
+          <h3 class="changecolor"> 
+            <!-- <span style="color:#ccc">【</span>切换账号<span style="color:#ccc">】</span> -->
+            <span style="color:#00c;font-size: .8229rem;font-family: 宋体;font-weight: normal;margin-right: 1.7143rem;">〖切换账号〗</span>
           </h3>
-          <h3>身份:&nbsp;在编教职工</h3>
-          <!-- <h3 class="warning2" style="font-size: 16px;transform: scale(0.6);display: inline-block;color: #f00;font-family: 黑体;line-height: 26px;min-height: 26px;">提醒：未检索到你今日出校记录</h3> -->
-          <h3 style="color: #555;font-size: 16px;transform: scale(0.6);display: inline-block;margin: 4px 0 2px -100px;" class="warning1">关注“郑州大学网络管理中心”微信公众号可提醒健康打卡</h3>
-        </div>
-        <div class="pic">
-          <img
-            src=""
-            alt="点击切换账号，添加图片" id="showImg">
-        </div>
-        <div class="pic1" style="display: none;">
-          <img
-            src=""
-            alt="点击切换账号，添加图片" id="showImg1">
-        </div>
+          <input type="file" name="" id="chooseImage" accept="*"
+            style="display: none;outline: none;border-width: 0;">
+          <span class="suijima">623</span>        
+          <input type="text" class="changesjs" style="display: none;outline: none;border-width: 0;">
+        </section>
+      </div>
+      <!-- 时间行 -->
+      <section class="time">
+        <div class="beforeline"></div>
+        <span style="font-size: 12px;">获取时间：</span>
+        <span class="getdate" style="color: #a0a;font-size: 16px;font-weight: normal;font-family: 宋体,黑体;margin-left: -10px;"><button>获取时间</button></span>
+        <span style="font-size: 12px;">&nbsp;有效时间剩余：</span>
+        <span class="getminute" style="margin-left: -10px;color: #c00; font-weight: 700;font-size: 22px;font-family: 宋体,黑体;"><button>获取有效剩余时间</button></span>
+        <div class="aftertline"></div>
       </section>
-      <!-- 底部信息 -->
-      <footer class="footer" style="position: relative;">
-        <p style="color: #555;font-size: 16px;transform: scale(0.6);display: inline-block;margin-left: -25px;margin-right: -20px;padding-top: 5px;">郑州大学疫情防控领导小组、保卫处、信息化办公室</p>
-        <p style="color: #555;font-size: 16px;transform: scale(0.6);display: inline-block;position: absolute;top: 20px;left: -90px;right: -40px;">定位: 河南省郑州市中原区金菊街附近&nbsp;&nbsp;&nbsp;&nbsp; (
-          <span style="color: #090;" class="toggle">扫码在设定区域内</span>)
-        </p>
-      </footer>
+      <!-- 个人信息 -->
+      <div style="margin-left: 10px;">
+        <section class="info">
+          <div class="text">
+            <h3 class="name">计算机学院.名字</h3>
+            <input type="text" class="changename" style="display: none;outline: none;border-width: 0;">
+            <h3>主校区大门东门.<span class="inout" style="background-color: #007500;color: #ffea3f;">入口</span>
+            </h3>
+            <h3>身份:&nbsp;在编教职工</h3>
+            <!-- <h3 class="warning2" style="font-size: 16px;transform: scale(0.6);display: inline-block;color: #f00;font-family: 黑体;line-height: 26px;min-height: 26px;">提醒：未检索到你今日出校记录</h3> -->
+            <h3 style="color: #555;font-size: 16px;transform: scale(0.6);display: inline-block;margin: 4px 0 2px -100px;" class="warning1">关注“郑州大学网络管理中心”微信公众号可提醒健康打卡</h3>
+          </div>
+          <div class="pic">
+            <img
+              src=""
+              alt="点击切换账号，添加图片" id="showImg">
+          </div>
+          <div class="pic1" style="display: none;">
+            <img
+              src=""
+              alt="点击切换账号，添加图片" id="showImg1">
+          </div>
+        </section>
+        <!-- 底部信息 -->
+        <footer class="footer" style="position: relative;">
+          <p style="color: #555;font-size: 16px;transform: scale(0.6);display: inline-block;margin-left: -25px;margin-right: -20px;padding-top: 5px;">郑州大学疫情防控领导小组、保卫处、信息化办公室</p>
+          <p style="color: #555;font-size: 16px;transform: scale(0.6);display: inline-block;position: absolute;top: 20px;left: -90px;right: -40px;">定位: 河南省郑州市中原区金菊街附近&nbsp;&nbsp;&nbsp;&nbsp; (
+            <span style="color: #090;" class="toggle">扫码在设定区域内</span>)
+          </p>
+        </footer>
+      </div>
     </div>
   </div>
-
   <script>
     window.addEventListener('load', function () {
       let getdate = document.querySelector('.getdate');

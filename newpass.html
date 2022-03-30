@@ -311,7 +311,7 @@
       setInterval(function () {
         pic1.classList.toggle('pic1border');
       }, 1000);
-      suijima.addEventListener('click', function () {
+      suijima.addEventListener('dblclick', function () {
         changesjs.style.display = 'block';
         changesjs.addEventListener('blur', function () {
           let val = changesjs.value.split(' ');
@@ -325,7 +325,7 @@
           changesjs.style.display = 'none';
         });
       });
-      name.addEventListener('click', function () {
+      name.addEventListener('dblclick', function () {
         changename.style.display = 'block';
         changename.addEventListener('blur', function () {
           let vals = changename.value;
@@ -336,7 +336,7 @@
           changename.style.display = 'none';
         });
       });
-      changecolor.addEventListener('click', function () {
+      changecolor.addEventListener('dblclick', function () {
         chooseImage.style.display = 'block';
         info.addEventListener('click', function () {
           chooseImage.style.display = 'none';
@@ -364,7 +364,7 @@
       });
 
       var isIn = true;
-      toggle.addEventListener('click', function () {
+      toggle.addEventListener('dblclick', function () {
         isIn = !isIn;
         if (isIn) {
           pic.style.display = 'block';

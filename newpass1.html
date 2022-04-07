@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes,
   maximum-scale=1,minimum-scale=1">
   <!-- <link href='http://fonts.font.im/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'> -->
-  <link href='http://fonts.proxy.ustclug.org/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.proxy.ustclug.org/css?family=Chivo:400,900' rel='stylesheet' type='text/css'> -->
   <title>郑州大学数据中台2021</title>
   <style>
     * {
@@ -28,13 +28,15 @@
       width: 350px;
       height: 105px;
       overflow: hidden;
-      background: url("https://Wdbwyy456.github.io/title316_91639.png");
+      margin-bottom: 7px;
+      /* background: url("https://Wdbwyy456.github.io/title316_91639.png") no-repeat; */
     }
 
     .nav {
       float: left;
       width: 10.6571rem;
       height: 6.9943rem;
+      background: url("https://Wdbwyy456.github.io/title316_91639.png") no-repeat;
       /*background: url("https://jksb.v.zzu.edu.cn/imagesss/title316_95548.png") 0 0 no-repeat;
        background-size: 200% 100%; */
     }
@@ -68,16 +70,23 @@
       width: 50px;
       height: 25px;
     }
-
+    .suijishuzi{
+      margin-top: 20px;
+      margin-left: 5px;
+      width: 125px;
+      height: 85px;
+      /* background-color: #fff; */
+    }
     .suijima {
       position: absolute;
       top: 30px;
       left: -16px;
       height: 60px;
       line-height: 60px;
-      color: orangered;
+      color: #f00;
       font-size: 90px;
       font-weight: 800;
+      /* background-color: #fff; */
       transform: scale(.65, 1);
       /* 'Franklin Gothic Medium' */
       /* font-family: 'Arial Narrow', Arial, sans-serif; */
@@ -211,7 +220,10 @@
           </h3>
           <input type="file" name="" id="chooseImage" accept="*"
             style="display: none;outline: none;border-width: 0;">
-          <span class="suijima"></span>        
+            <div class="suijishuzi">
+              <span class="suijima">498</span> 
+            </div>
+                 
           <input type="text" class="changesjs" style="display: none;outline: none;border-width: 0;">
         </section>
       </div>
@@ -274,7 +286,24 @@
       let info = document.querySelector('.info');
       let warning1 = document.querySelector('.warning1');
       let warning2 = document.querySelector('.warning2');
+      let container = document.querySelector('.container');
+      let nav = container.querySelector('.nav');
       let shengyutime = 599;
+      // let mondayNum = ['/1/title316_34608.png','/1/title316_31134.png','/1/title316_57906.png','/1/title316_44463.png','/1/title316_60381.png','/1/title316_60822.png','/1/title316_68807.png','/1/title316_94914.png','/0/title316_00000.png'];
+      // let tuesdayNum = ['/2/title316_19968.png','/2/title316_35970.png','/2/title316_38595.png','/2/title316_44087.png','/2/title316_57138.png','/2/title316_80639.png','/2/title316_80993.png','/2/title316_82619.png','/2/title316_90221.png','/0/title316_00000.png'];
+      // let wednesdayNum = ['/3/title316_18487.png','/3/title316_22587.png','/3/title316_26934.png','/3/title316_28289.png','/3/title316_37639.png','/3/title316_51201.png','/3/title316_59201.png','/3/title316_67997.png','/0/title316_00000.png'];
+      // let thursdayNum = ['/4/title316_11867.png','/4/title316_12966.png','/4/title316_53887.png','/4/title316_63803.png','/4/title316_84851.png','/4/title316_90449.png','/4/title316_91639.png','/4/title316_98466.png','/0/title316_00000.png'];
+      // let fridayNum = ['/5/title316_13024.png','/5/title316_32408.png','/5/title316_38933.png','/5/title316_50936.png','/5/title316_52864.png','/5/title316_71973.png','/5/title316_76036.png','/5/title316_80951.png','/5/title316_89444.png','/0/title316_00000.png'];
+      // let saturdayNum = ['/6/title316_13656.png','/6/title316_25309.png','/6/title316_29113.png','/6/title316_34457.png','/6/title316_37735.png','/6/title316_44113.png','/6/title316_60368.png','/6/title316_80984.png','/6/title316_87138.png','/6/title316_97128.png','/0/title316_00000.png'];
+      // let sundayNum = ['/7/title316_17976.png','/7/title316_32684.png','/7/title316_36899.png','/7/title316_59832.png','/7/title316_67383.png','/7/title316_87181.png','/7/title316_87994.png','/7/title316_90360.png','/7/title316_99189.png','/0/title316_00000.png'];
+
+      let mondayNum = ['title316_34608.png','title316_31134.png','title316_57906.png','title316_44463.png','title316_60381.png','title316_60822.png','title316_68807.png','title316_94914.png','title316_00000.png','title316_00000.png'];
+      let tuesdayNum = ['title316_19968.png','title316_35970.png','title316_38595.png','title316_44087.png','title316_57138.png','title316_80639.png','title316_80993.png','title316_82619.png','title316_90221.png','title316_00000.png'];
+      let wednesdayNum = ['title316_18487.png','title316_22587.png','title316_26934.png','title316_28289.png','title316_37639.png','title316_51201.png','title316_59201.png','title316_67997.png','title316_00000.png','title316_00000.png'];
+      let thursdayNum = ['title316_11867.png','title316_12966.png','title316_53887.png','title316_63803.png','title316_84851.png','title316_90449.png','title316_91639.png','title316_98466.png','title316_00000.png','title316_00000.png'];
+      let fridayNum = ['title316_13024.png','title316_32408.png','title316_38933.png','title316_50936.png','title316_52864.png','title316_71973.png','title316_76036.png','title316_80951.png','title316_89444.png','title316_00000.png'];
+      let saturdayNum = ['title316_13656.png','title316_25309.png','title316_29113.png','title316_34457.png','title316_37735.png','title316_44113.png','title316_60368.png','title316_80984.png','title316_87138.png','title316_97128.png','title316_00000.png'];
+      let sundayNum = ['title316_17976.png','title316_32684.png','title316_36899.png','title316_59832.png','title316_67383.png','title316_87181.png','title316_87994.png','title316_90360.png','title316_99189.png','title316_00000.png'];
       getdate.addEventListener('click', function () {
         let date = new Date();
         let nowMouth = date.getMonth() + 1;
@@ -388,7 +417,21 @@
           // warning1.innerText("提醒：未检索到你今日出校记录");
         }
       })
-
+      let i = 0;
+      
+      nav.addEventListener('dblclick',function(){
+        suijima.style.display = 'none';
+        nav.style.background = '';
+        let now = new Date();
+        let day = now.getDay();
+        if(i>=10){
+          i = 0;
+        }
+        let numberArray = day === 1 ? mondayNum : day === 2 ? tuesdayNum : day === 3 ? wednesdayNum : day === 4 ? thursdayNum : day === 5 ? fridayNum : day === 6 ? saturdayNum : day === 7 ? sundayNum : '';
+        console.log(day);
+        container.style.background = `url("https://wdbwyy456.github.io/img/${day}/${numberArray[i]}") no-repeat`;
+        i++;
+      })
     })
   </script>
 </body>

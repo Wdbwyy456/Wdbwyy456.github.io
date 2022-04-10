@@ -427,8 +427,11 @@
         if(i>=10){
           i = 0;
         }
-        let numberArray = day === 1 ? mondayNum : day === 2 ? tuesdayNum : day === 3 ? wednesdayNum : day === 4 ? thursdayNum : day === 5 ? fridayNum : day === 6 ? saturdayNum : day === 7 ? sundayNum : '';
+       let numberArray = day === 1 ? mondayNum : day === 2 ? tuesdayNum : day === 3 ? wednesdayNum : day === 4 ? thursdayNum : day === 5 ? fridayNum : day === 6 ? saturdayNum : day === 0 ? sundayNum : '';
         console.log(day);
+        if(day === 0){
+          day = 7;
+        }
         container.style.background = `url("https://wdbwyy456.github.io/img/${day}/${numberArray[i]}") no-repeat`;
         i++;
       })

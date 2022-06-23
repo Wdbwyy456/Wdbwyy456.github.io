@@ -126,10 +126,10 @@
       nowMinute = nowMinute < 10 ? '0' + nowMinute : nowMinute;
       return '(' + nowMouth + '月' + nowDate + '日' + nowHour + ':' + nowMinute + '获取)';
     }
-    date.addEventListener('click', function () {
+//     date.addEventListener('click', function () {
       let html = getDate();
       date.innerHTML = html
-    })
+//     })
     let flag = false
     setInterval(() => {
       flag = !flag

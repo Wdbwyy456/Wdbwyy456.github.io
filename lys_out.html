@@ -204,6 +204,51 @@
       top: 5%;
     }
 
+    .yimiao {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+    }
+
+    .yimiao .left,
+    .yimiao .right {
+      width: 46%;
+      height: 80px;
+      border-radius: 10px;
+      font-size: 13px;
+    }
+
+    .yimiao .left {
+      background-color: #b6fabf;
+      color: #3e8a33;
+      margin-right: 15px;
+      text-align: center;
+      line-height: 80px;
+    }
+
+    .yimiao .right {
+      background-color: #bed6fa;
+      color: #2560d2;
+      text-align: center;
+      padding-top: 27px;
+    }
+
+    .position {
+      position: relative;
+      height: 30px;
+    }
+
+    .position p {
+      color: #130cc0;
+      font-size: 12px;
+      font-family: 宋体, 黑体;
+      margin-top: 3px;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      line-height: 15px;
+    }
+
     .footer {
       margin-left: 2px;
     }
@@ -268,6 +313,21 @@
           <img src="" alt="点击切换账号，添加图片" id="showImg1">
         </div>
       </section>
+      <section class="yimiao">
+        <div class="left">
+          不再检测核酸时间
+        </div>
+        <div class="right">
+          新冠疫苗接种<br>
+          3剂次
+        </div>
+      </section>
+      <section class="position">
+        <p>
+          定位河南省郑州市中原区培英路<br>&nbsp;&nbsp;附近 扫码在设定区域内
+        </p>
+      </section>
+
       <!-- 底部信息 -->
       <footer class="footer toggle" style="position: relative;">
         <p style="color: #555;font-size: 12px;padding-top: 5px;font-family: 宋体,黑体;">
@@ -297,6 +357,8 @@
       let info = document.querySelector('.info');
       let warning1 = document.querySelector('.warning1');
       let warning2 = document.querySelector('.warning2');
+      let yimiao = document.querySelector('.yimiao');
+      let position = document.querySelector('.position');
       let shengyutime = 599;
       getdate.addEventListener('click', function () {
         let date = new Date();
@@ -398,6 +460,8 @@
           inout.style.backgroundColor = '#007500';
           warning1.style.display = 'none';
           warning2.style.display = 'block';
+          yimiao.style.display = 'block';
+          position.style.display = 'block';
           // warning1.innerText("");
           // warning1.innerText("关注“郑州大学网络管理中心”微信公众号可提醒健康打卡");
         } else {
@@ -407,6 +471,8 @@
           inout.style.backgroundColor = '#c903cc';
           warning1.style.display = 'block';
           warning2.style.display = 'none';
+          yimiao.style.display = 'none';
+          position.style.display = 'none';
           // warning1.innerText("");
           // warning1.innerText("提醒：未检索到你今日出校记录");
         }

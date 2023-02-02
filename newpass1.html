@@ -372,9 +372,10 @@
         nowHour = nowHour < 10 ? '0' + nowHour : nowHour;
         let nowMinute = date.getMinutes();
         nowMinute = nowMinute < 10 ? '0' + nowMinute : nowMinute;
-        getdate.innerHTML = '(' + '0' + nowMouth + '月' + nowDate + '日 ' + nowHour + ':' + nowMinute + '获取)';
+        getdate.innerHTML = '(' + '0' + nowMouth + '月' + nowDate + '日' + nowHour + ':' + nowMinute + '获取)';
         shengyutime = 599;
       });
+      getdate.click();
 
       setInterval(function () {
         pic.classList.toggle('picborder');

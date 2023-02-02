@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes,
   maximum-scale=1,minimum-scale=1">
-  <!-- <link href='http://fonts.font.im/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'> -->
-  <!-- <link href='http://fonts.proxy.ustclug.org/css?family=Chivo:400,900' rel='stylesheet' type='text/css'> -->
   <title>郑州大学数据中台2021</title>
   <style>
     * {
@@ -20,6 +18,15 @@
     .w {
       width: 24rem;
       margin: 0 auto;
+    }
+
+    .forminfo {
+      margin: 150px auto;
+      width: 400px;
+      border-radius: 15px;
+      background-color: #eee;
+      box-sizing: border-box;
+      padding: 30px 15px;
     }
 
     .content {
@@ -54,13 +61,6 @@
       color: #5a56c2;
     }
 
-    #chooseImage {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #ccc;
-    }
-
     .changecolo {
       position: absolute;
       top: 0;
@@ -79,13 +79,7 @@
       color: orangered;
       font-size: 90px;
       font-weight: 800;
-      /* transform: scale(.65, 1); */
-      /* 'Franklin Gothic Medium' */
-      /* font-family: 'Arial Narrow', Arial, sans-serif; */
-      /* font-family: 'Arial Narrow'; */
-      /* font-family: 'Droid Sans', sans-serif;; */
       font-family: 'Chivo', sans-serif;
-      /* text-shadow: 3px 3px 5px #eee; */
     }
 
     .changesjs {
@@ -124,15 +118,9 @@
       left: 0;
     }
 
-    /* .info {
-      margin-left: 30px;
-    } */
-
     .text {
       position: relative;
       width: 100%;
-      /* height: 7.2686rem; */
-      /* padding-left: 1.0286rem; */
       background: url("https://jksb.v.zzu.edu.cn/imagesss/sf_shi3.png") -13px 0 no-repeat;
     }
 
@@ -187,8 +175,6 @@
 
     .pic img,
     .pic1 img {
-      /* width: 14.6057rem;
-      height: 20.5714rem; */
       width: 100%;
       height: 100%;
     }
@@ -207,7 +193,6 @@
     .yimiao {
       width: 100%;
       margin-top: 10px;
-      /* display: flex; */
     }
 
     .yimiao .left,
@@ -256,7 +241,34 @@
 
 <body>
   <div class="w">
-    <div class="content">
+    <div class="forminfo">
+      <h2 style="text-align:center;margin-bottom:30px">填写个人信息</h2>
+      <div class="infos" style="margin-left:50px">
+        姓名： <input id="usrname" type="text"
+          style="outline: none;border-width: 0;border-bottom: 1px solid #000;width:200px;background-color: #eee;">
+        <br>
+        <br>
+        校门： <input id="gate" type="text"
+          style="outline: none;border-width: 0;border-bottom: 1px solid #000;width:200px;background-color: #eee;"
+          placeholder="东门">
+        <br>
+        <br>
+        通行码： <input id="number" type="text"
+          style="outline: none;border-width: 0;border-bottom: 1px solid #000;width:185px;background-color: #eee;">
+        <br>
+        <br>
+        通行码颜色： <input id="color" type="text"
+          style="outline: none;border-width: 0;border-bottom: 1px solid #000;width:155px;background-color: #eee;"
+          placeholder="red/#000">
+        <br>
+        <br>
+        照片： <input type="file" name="" id="chooseImage" accept="*">
+
+        <input type="submit" value="提交" style="font-size:14px;padding:5px 30px;margin-top: 20px;margin-left:25%" onclick="test()" />
+      </div>
+
+    </div>
+    <div class="content" style="display: none;">
       <div class="container">
         <!-- logo行 -->
         <nav class="nav">
@@ -266,43 +278,25 @@
         </nav>
         <!-- 通行码行 -->
         <section class="tongxingma">
-          <h3 class="changecolor">
-            <!-- <span style="color:#ccc">【</span>切换账号<span style="color:#ccc">】</span> -->
-            <span
-              style="color:#00c;font-size: .8229rem;font-family: 宋体;font-weight: normal;margin-right: 1.7143rem;visibility: hidden;">〖切换账号〗</span>
-          </h3>
-          <input type="file" name="" id="chooseImage" accept="*" style="display: none;outline: none;border-width: 0;">
+          <!-- <input type="file" name="" id="chooseImage" accept="*" style="display: none;outline: none;border-width: 0;"> -->
           <span class="suijima">432</span>
-          <input type="text" class="changesjs" style="display: none;outline: none;">
         </section>
       </div>
-      <!-- 时间行 -->
-      <!-- <section class="time">
-        <div class="beforeline"></div>
-        <span style="font-size: 12px;">获取时间：</span>
-        <span class="getdate" style="color: #a0a;font-size: 16px;font-weight: normal;font-family: 宋体,黑体;margin-left: -10px;"><button>获取时间</button></span>
-        <span style="font-size: 12px;">&nbsp;&nbsp;有效期剩余</span>
-        <span class="getminute" style="color: #c00; font-weight: normal;font-size: 22px;font-family: 黑体;">&nbsp;<button>获取有效剩余时间</button></span>
-        <div class="aftertline"></div>
-      </section> -->
       <!-- 个人信息 -->
       <section class="info">
         <div class="text">
-          <h3 class="name">
-            计算机学院.名字
+          <h3>
+            计算机学院.<span class="name">名字</span>
           </h3>
           <span class="qiehuanzh">〖切换账号〗</span>
-          <input type="text" class="changename" style="display: none;outline: none;">
-          <h3>主校区大门东门.<span class="inout" style="background-color: #007500;color: #ff0;font-family: 黑体;">入口</span>
+          <!-- <input type="text" class="changename" style="display: none;outline: none;"> -->
+          <h3>主校区大门<span class="gatename">东门</span>.<span class="inout" style="background-color: #007500;color: #ff0;font-family: 黑体;">入口</span>
           </h3>
           <h3>
             身份:&nbsp;在编教职工
             <span class="getdate"
               style="color: #000;font-size: 12px;font-weight: normal;font-family: 宋体,黑体;margin-left: -10px;"><button>获取时间</button></span>
           </h3>
-
-          <!-- <h3 class="warning2" style="color: #666;font-size: 12px;margin-left: -18px;margin-top: 3px;">关注“郑州大学网络管理中心”微信公众号可提醒健康打卡</h3>
-            <h3 style="color: #666;font-size: 12px;margin-left: -18px;margin-top: 3px;display: none;" class="warning1">关注“郑州大学网络管理中心”微信公众号可提醒健康打卡</h3> -->
         </div>
         <div style="height: 25px;"></div>
         <div class="pic" style="margin-left: -5px;">
@@ -330,33 +324,44 @@
       <footer class="footer toggle" style="position: relative;">
         <p style="color: #555;font-size: 12px;padding-top: 5px;font-family: 宋体,黑体;">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郑州大学疫情防控领导小组、保卫处、信息化办公室</p>
-        <!-- <p style="color: #555;font-size: 12px;font-family: 宋体,黑体;margin-top: 3px;">&nbsp;&nbsp;&nbsp;&nbsp;定位: 河南省郑州市中原区金菊街附近&nbsp; (
-            <span style="color: #090;" class="toggle">扫码在设定区域内</span>)
-          </p> -->
       </footer>
     </div>
   </div>
   <script>
-    window.addEventListener('load', function () {
-      let getdate = document.querySelector('.getdate');
-      // let getminute = document.querySelector('.getminute');
-      let pic = document.querySelector('.pic');
-      let pic1 = document.querySelector('.pic1');
-      let suijima = document.querySelector('.suijima');
-      let changesjs = document.querySelector('.changesjs');
-      let name = document.querySelector('.name');
-      let changename = document.querySelector('.changename');
-      let changecolor = document.querySelector('.changecolor');
-      let chooseImage = document.querySelector('#chooseImage');
-      let showImg = document.querySelector('#showImg');
-      let showImg1 = document.querySelector('#showImg1');
-      let toggle = document.querySelector('.toggle');
-      let inout = document.querySelector('.inout');
-      let info = document.querySelector('.info');
-      // let warning1 = document.querySelector('.warning1');
-      // let warning2 = document.querySelector('.warning2');
-      let yimiao = document.querySelector('.yimiao');
-      let position = document.querySelector('.position');
+    let content = document.querySelector('.content');
+    let forminfo = document.querySelector('.forminfo');
+    let username = document.querySelector('#usrname');
+    let gate = document.querySelector('#gate');
+    let number = document.querySelector('#number');
+    let color = document.querySelector('#color');
+    let chooseImage = document.querySelector('#chooseImage');
+
+    let gatename = document.querySelector('.gatename');
+
+    let getdate = document.querySelector('.getdate');
+
+    let pic = document.querySelector('.pic');
+    let pic1 = document.querySelector('.pic1');
+
+    let suijima = document.querySelector('.suijima');
+
+    let name = document.querySelector('.name');
+
+    let showImg = document.querySelector('#showImg');
+    let showImg1 = document.querySelector('#showImg1');
+
+    let toggle = document.querySelector('.toggle');
+    let inout = document.querySelector('.inout');
+
+    let yimiao = document.querySelector('.yimiao');
+    let position = document.querySelector('.position');
+
+    function test() {
+      let name1 = username.value;
+      let gate1 = gate.value;
+      let number1 = number.value;
+      let color1 = color.value;
+
       let shengyutime = 599;
       getdate.addEventListener('click', function () {
         let date = new Date();
@@ -370,83 +375,18 @@
         getdate.innerHTML = '(' + '0' + nowMouth + '月' + nowDate + '日 ' + nowHour + ':' + nowMinute + '获取)';
         shengyutime = 599;
       });
-      // let isClick = false;
-      // getminute.addEventListener('click', function () {
-      //   if (isClick) {
-      //     return;
-      //   } else {
-      //     clearInterval(timer);
-      //     // let shengyutime = 599;
-      //     var timer = setInterval(function () {
-      //       if (shengyutime === 1) {
-      //         shengyutime = 599;
-      //       }
-      //       let sysec = parseInt(shengyutime % 60);
-      //       sysec = sysec < 10 ? '0' + sysec : sysec;
-      //       let symin = Math.floor(shengyutime / 60);
-      //       shengyutime--;
-      //       getminute.innerHTML = symin + '分' + sysec + '秒';
-      //     }, 1000);
-      //     isClick = true;
-      //   }
-      // });
+
       setInterval(function () {
         pic.classList.toggle('picborder');
       }, 1000);
       setInterval(function () {
         pic1.classList.toggle('pic1border');
       }, 1000);
-      suijima.addEventListener('dblclick', function () {
-        changesjs.style.display = 'block';
-        changesjs.addEventListener('blur', function () {
-          let val = changesjs.value.split(' ');
-          if (val[0]) {
-            suijima.innerHTML = val[0];
-            if (val[1]) {
-              suijima.style.color = val[1];
-            }
-          }
-          changesjs.value = '';
-          changesjs.style.display = 'none';
-        });
-      });
-      name.addEventListener('dblclick', function () {
-        changename.style.display = 'block';
-        changename.addEventListener('blur', function () {
-          let vals = changename.value;
-          if (vals) {
-            name.innerHTML = '计算机学院.' + vals;
-          }
-          changename.value = '';
-          changename.style.display = 'none';
-        });
-      });
-      changecolor.addEventListener('dblclick', function () {
-        chooseImage.style.display = 'block';
-        info.addEventListener('click', function () {
-          chooseImage.style.display = 'none';
-        })
-        chooseImage.addEventListener('change', function (e) {
-          var filePath = chooseImage.value,
-            fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase();//获取文件后缀名
-          // 检查后缀名
-          if (!fileFormat.match(/.png|.jpg|.jpeg/)) {
-            showError('文件格式必须为:png/jpg/jpeg');//showError是另外写的一个显示错误信息的function
-            return;
-          }
-          //获取并记录图片的base64编码
-          var reader = new FileReader();
-          reader.readAsDataURL(e.target.files[0]); // 读出 base64
-          reader.onloadend = function () {
-            // 图片的 base64 格式, 可以直接当成 img 的 src 属性值        
-            var dataURL = reader.result;//base64
-            // 显示图片
-            showImg.src = dataURL;
-            showImg1.src = dataURL;
-          };;
-          chooseImage.style.display = 'none';
-        });
-      });
+      suijima.style.color = color1 !== '' ? color1 : 'pink';
+      suijima.innerHTML = number1 ? number1 : '532';
+
+      name.innerHTML = name1 !== '' ? name1 : '赵英';
+      gatename.innerHTML = gate1 !== '' ? gate1 : '东门';
 
       var isIn = true;
       toggle.addEventListener('dblclick', function () {
@@ -456,26 +396,42 @@
           pic1.style.display = 'none';
           inout.innerHTML = '入口';
           inout.style.backgroundColor = '#007500';
-          // warning1.style.display = 'none';
-          // warning2.style.display = 'block';
           yimiao.style.display = 'block';
           position.style.display = 'block';
-          // warning1.innerText("");
-          // warning1.innerText("关注“郑州大学网络管理中心”微信公众号可提醒健康打卡");
         } else {
           pic.style.display = 'none';
           pic1.style.display = 'block';
           inout.innerHTML = '出口';
           inout.style.backgroundColor = '#c903cc';
-          // warning1.style.display = 'block';
-          // warning2.style.display = 'none';
           yimiao.style.display = 'none';
           position.style.display = 'none';
-          // warning1.innerText("");
-          // warning1.innerText("提醒：未检索到你今日出校记录");
         }
       })
-
+      
+      forminfo.style.display = 'none';
+      content.style.display = 'block';
+    }
+    window.addEventListener('load', function () {
+      chooseImage.addEventListener('change', function (e) {
+        console.log(333);
+        var filePath = chooseImage.value,
+          fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase();//获取文件后缀名
+        // 检查后缀名
+        if (!fileFormat.match(/.png|.jpg|.jpeg/)) {
+          showError('文件格式必须为:png/jpg/jpeg');//showError是另外写的一个显示错误信息的function
+          return;
+        }
+        //获取并记录图片的base64编码
+        var reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]); // 读出 base64
+        reader.onloadend = function () {
+          // 图片的 base64 格式, 可以直接当成 img 的 src 属性值        
+          var dataURL = reader.result;//base64
+          // 显示图片;
+          showImg.src = dataURL;
+          showImg1.src = dataURL;
+        };
+      });
     })
   </script>
 </body>
